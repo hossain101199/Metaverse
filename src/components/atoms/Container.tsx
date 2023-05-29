@@ -5,7 +5,7 @@ const Container = ({
   className,
 }: {
   children: React.ReactNode;
-  className: string;
+  className?: string;
 }) => {
   return (
     <div className={`container mx-auto px-4 lg:px-0 ${className}`}>
