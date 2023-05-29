@@ -1,5 +1,12 @@
-import Image from "next/image";
+import Container from "@/components/atoms/Container";
+import Navbar from "../layouts//header/Navbar";
 
 export default function Home() {
-  return <main>hello</main>;
+  return (
+    <main>
+      <Container>
+        <Navbar />
+      </Container>
+    </main>
+  );
 }
