@@ -21,7 +21,7 @@ const HeroSection = () => {
             <h1 className="heroHeading">Ness</h1>
           </div>
         </div>
-        <div className="flex sm:flex-col pr-4 sm:pr-0 items-end justify-end  sm:justify-start gap-8 w-full">
+        <div className="flex sm:flex-col pr-4 items-end justify-end sm:justify-start sm:pr-9 gap-8 w-full">
           {socialMedia
             .filter((media) =>
               ["Reddit", "Discord", "Twitter", "Instagram"].includes(media.name)
