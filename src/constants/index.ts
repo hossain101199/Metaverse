@@ -1,6 +1,8 @@
+import DiscordIcon from "@/assets/svgs/DiscordIcon";
 import FaceBookIcon from "@/assets/svgs/FaceBookIcon";
 import InstagramIcon from "@/assets/svgs/InstagramIcon";
 import LinkedinIcon from "@/assets/svgs/LinkedinIcon";
+import RedditIcon from "@/assets/svgs/RedditIcon";
 import TwitterIcon from "@/assets/svgs/TwitterIcon";
 
 export const NavigationRoutes = [
@@ -18,4 +20,18 @@ export const socialMedia = [
   { id: 2, name: "Linkedin", href: "/", icon: LinkedinIcon },
   { id: 3, name: "Instagram", href: "/", icon: InstagramIcon },
   { id: 4, name: "FaceBook", href: "/", icon: FaceBookIcon },
+  { id: 5, name: "Reddit", href: "/", icon: RedditIcon },
+  { id: 6, name: "Discord", href: "/", icon: DiscordIcon },
 ];
+
+const filteredSocialMedia = socialMedia
+  .filter((media) =>
+    ["Reddit", "Discord", "Twitter", "Instagram"].includes(media.name)
+  )
+  .sort(
+    (a, b) =>
+      ["Reddit", "Discord", "Twitter", "Instagram"].indexOf(a.name) -
+      ["Reddit", "Discord", "Twitter", "Instagram"].indexOf(b.name)
+  );
+
+console.log(filteredSocialMedia);

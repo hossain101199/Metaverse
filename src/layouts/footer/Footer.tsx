@@ -18,7 +18,7 @@ const Footer = () => {
           Copyright © {year} Metaversus. All rights reserved.
         </NormalParagraph>
         <div className="flex gap-8">
-          {socialMedia.map((media) => (
+          {socialMedia.slice(0, 4).map((media) => (
             <Link key={media.id} href={media.href}>
               <media.icon />
             </Link>
