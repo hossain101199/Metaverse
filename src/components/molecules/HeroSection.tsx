@@ -1,6 +1,5 @@
 import React from "react";
 import SectionName from "../atoms/SectionName";
-import styles from "@/styles";
 import { socialMedia } from "@/constants";
 import Link from "next/link";
 import Image from "next/image";
@@ -15,11 +14,11 @@ const HeroSection = () => {
           <SectionName name="Home" />
         </div>
         <div className="flex justify-center items-center flex-col w-full sm:pt-[70px] px-4">
-          <h1 className={styles.heroHeading}>Metaverse</h1>
+          <h1 className="heroHeading">Metaverse</h1>
           <div className="flex flex-row justify-center items-center">
-            <h1 className={styles.heroHeading}>Ma</h1>
-            <div className={styles.heroDText} />
-            <h1 className={styles.heroHeading}>Ness</h1>
+            <h1 className="heroHeading">Ma</h1>
+            <div className="heroDText" />
+            <h1 className="heroHeading">Ness</h1>
           </div>
         </div>
         <div className="flex sm:flex-col pr-4 sm:pr-0 items-end justify-end  sm:justify-start gap-8 w-full">
@@ -39,7 +38,7 @@ const HeroSection = () => {
             ))}
         </div>
       </div>
-      <div className="relative h-[288px] md:h-[488px] mb-10">
+      <div className="relative h-[288px] md:h-[488px] mb-10 lg:pl-[135px]">
         <Image
           src={heroImage}
           alt="Hero Image"

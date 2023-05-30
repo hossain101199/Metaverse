@@ -23,15 +23,3 @@ export const socialMedia = [
   { id: 5, name: "Reddit", href: "/", icon: RedditIcon },
   { id: 6, name: "Discord", href: "/", icon: DiscordIcon },
 ];
-
-const filteredSocialMedia = socialMedia
-  .filter((media) =>
-    ["Reddit", "Discord", "Twitter", "Instagram"].includes(media.name)
-  )
-  .sort(
-    (a, b) =>
-      ["Reddit", "Discord", "Twitter", "Instagram"].indexOf(a.name) -
-      ["Reddit", "Discord", "Twitter", "Instagram"].indexOf(b.name)
-  );
-
-console.log(filteredSocialMedia);
