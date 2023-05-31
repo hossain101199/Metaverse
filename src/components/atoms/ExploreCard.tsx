@@ -31,10 +31,10 @@ const ExploreCard = ({
         backgroundPosition: "center",
         width: "100%",
       }}
-      className={`relative md:h-[563px] rounded-[24px] p-[32px] flex flex-col justify-end gap-4 overflow-hidden cursor-pointer ${className}`}
+      className={`relative md:h-[563px] roundedRadius p-[32px] flex flex-col justify-end gap-4 overflow-hidden cursor-pointer ${className}`}
     >
       <div className={`flex flex-col gap-6 ${active !== id && "md:hidden"}`}>
-        <div className="w-[60px] h-[60px] bg-transparent backdrop-blur-3xl rounded-[24px] flex justify-center items-center">
+        <div className="w-[60px] h-[60px] bg-transparent backdrop-blur-3xl roundedRadius flex justify-center items-center">
           <HeadsetIcon />
         </div>
         <button>

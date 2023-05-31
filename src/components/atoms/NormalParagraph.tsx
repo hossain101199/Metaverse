@@ -9,7 +9,11 @@ const NormalParagraph = ({
   textColor?: string;
   className?: string;
 }) => {
-  return <p className={`font-normal ${textColor} ${className}`}>{children}</p>;
+  return (
+    <p className={`font-normal leading-[180%] ${textColor} ${className}`}>
+      {children}
+    </p>
+  );
 };
 
 export default NormalParagraph;

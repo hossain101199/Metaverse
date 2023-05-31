@@ -9,6 +9,8 @@ import planet02 from "../assets/images/planet-02.png";
 import planet03 from "../assets/images/planet-03.png";
 import planet04 from "../assets/images/planet-04.png";
 import planet05 from "../assets/images/planet-05.png";
+import HeadsetIcon from "@/assets/svgs/HeadsetIcon";
+import VrpanoIcon from "@/assets/svgs/VrpanoIcon";
 
 export const NavigationRoutes = [
   { id: 1, name: "Home", href: "home" },
@@ -65,13 +67,13 @@ export const startingFeatures = [
 
 export const newFeatures = [
   {
-    imgUrl: "/vrpano.svg",
+    icon: HeadsetIcon,
     title: "A new world",
     subtitle:
       "we have the latest update with new world for you to try never mind",
   },
   {
-    imgUrl: "/headset.svg",
+    icon: VrpanoIcon,
     title: "More realistic",
     subtitle:
       "In the latest update, your eyes are narrow, making the world more realistic than ever",

@@ -12,6 +12,10 @@ module.exports = {
         "primary-black": "#1A232E",
         "secondary-white": "#B0B0B0;",
       },
+
+      backgroundColor: {
+        "white-opacity-8": "rgba(255, 255, 255, 0.08)",
+      },
     },
   },
   plugins: [],

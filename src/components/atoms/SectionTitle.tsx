@@ -9,7 +9,7 @@ const SectionTitle = ({
 }) => {
   return (
     <h2
-      className={`font-bold text-5xl md:text-[64px] leading-[50px] md:leading-[81px] text-white ${className}`}
+      className={`font-bold text-5xl lg:text-[64px] leading-[50px] md:leading-[81px] text-white ${className}`}
     >
       {children}
     </h2>
