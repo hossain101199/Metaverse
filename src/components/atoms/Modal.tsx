@@ -11,7 +11,7 @@ const Modal: React.FC<ModalProps> = ({ handleClose, className, children }) => {
   return (
     <motion.div
       onClick={handleClose}
-      className="absolute top-0 left-0 h-full w-full bg-[#000000e1] flex items-center justify-center"
+      className="absolute z-50 top-0 left-0 h-full w-full bg-[#000000e1] flex items-center justify-center"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}

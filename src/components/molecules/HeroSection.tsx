@@ -8,8 +8,8 @@ import stamp from "../../assets/images/stamp.png";
 
 const HeroSection = () => {
   return (
-    <>
-      <div className="relative z-50 flex flex-col sm:flex-row mt-[40px] md:mt-[84px]">
+    <section id="home">
+      <div className="relative z-10 flex flex-col sm:flex-row mt-[40px] md:mt-[84px]">
         <div className="flex w-full sm:pt-[90px] pl-4 lg:justify-end xl:pe-[71px]">
           <SectionName name="Home" />
         </div>
@@ -50,7 +50,7 @@ const HeroSection = () => {
           className="absolute bottom-[-30px] right-[12%]"
         />
       </div>
-    </>
+    </section>
   );
 };
 

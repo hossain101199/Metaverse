@@ -23,7 +23,11 @@ const NavigationMenu = ({ isSearchOn }: { isSearchOn: boolean }) => {
             className="flex flex-col bg-primary-black text-white p-16 rounded-lg"
           >
             {NavigationRoutes.map((route) => (
-              <Link key={route.id} href={route.href}>
+              <Link
+                key={route.id}
+                href={route.href}
+                onClick={() => setModalOpen(!modalOpen)}
+              >
                 {route.name}
               </Link>
             ))}
