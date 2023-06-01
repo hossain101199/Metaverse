@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import Modal from "../atoms/Modal";
 import { NavigationRoutes } from "@/constants";
@@ -7,6 +8,7 @@ import MenuIcon from "@/assets/svgs/MenuIcon";
 
 const NavigationMenu = ({ isSearchOn }: { isSearchOn: boolean }) => {
   const [modalOpen, setModalOpen] = useState(false);
+
   return (
     <>
       <button

@@ -8,8 +8,8 @@ import stamp from "../../assets/images/stamp.png";
 
 const HeroSection = () => {
   return (
-    <section id="home">
-      <div className="relative z-10 flex flex-col sm:flex-row mt-[40px] md:mt-[84px]">
+    <section id="home" className="mt-[25px] lg:mt-[50px]">
+      <div className="relative z-10 flex flex-col sm:flex-row">
         <div className="flex w-full sm:pt-[90px] pl-4 lg:justify-end xl:pe-[71px]">
           <SectionName name="Home" />
         </div>
@@ -32,7 +32,7 @@ const HeroSection = () => {
                 ["Reddit", "Discord", "Twitter", "Instagram"].indexOf(b.name)
             )
             .map((media) => (
-              <Link key={media.id} href={media.href}>
+              <Link key={media.id} href={media.href} passHref>
                 <media.icon />
               </Link>
             ))}

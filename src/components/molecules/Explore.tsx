@@ -9,10 +9,7 @@ const Explore = () => {
   const [active, setActive] = useState("world-2");
 
   return (
-    <section
-      id="explore"
-      className="xPaddings mx-auto mt-[101px] md:mt-[202px]"
-    >
+    <section id="explore" className="xPaddings mx-auto sectionMargin-top">
       <SectionName name="The World" className="text-center" />
       <SectionTitle className="max-w-[885px] mx-auto text-center mt-2">
         Choose the world you want to explore

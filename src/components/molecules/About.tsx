@@ -7,7 +7,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="flex flex-col items-center mx-auto xPaddings mt-[127px] md:mt-[255px]"
+      className="flex flex-col items-center mx-auto xPaddings sectionMargin-top"
     >
       <SectionName name="About Metaverus" className="text-center" />
       <BoldParagraph className="text-center leading-[1.8] text-2xl lg:text-[32px] mt-2 mb-7">

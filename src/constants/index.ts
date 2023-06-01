@@ -11,24 +11,58 @@ import planet04 from "../assets/images/planet-04.png";
 import planet05 from "../assets/images/planet-05.png";
 import HeadsetIcon from "@/assets/svgs/HeadsetIcon";
 import VrpanoIcon from "@/assets/svgs/VrpanoIcon";
+import planet6 from "../assets/images/planet-06.png";
+import planet7 from "../assets/images/planet-07.png";
+import planet8 from "../assets/images/planet-08.png";
 
 export const NavigationRoutes = [
-  { id: 1, name: "Home", href: "home" },
+  { id: 1, name: "Home", href: "#home" },
   { id: 2, name: "About", href: "#about" },
   { id: 3, name: "The World", href: "#explore" },
-  { id: 4, name: "How Metaverus Works", href: "#" },
-  { id: 5, name: "What's New?", href: "#" },
-  { id: 6, name: "People on the World", href: "#" },
-  { id: 7, name: "Insight", href: "#" },
+  { id: 4, name: "How Metaverus Works", href: "#GetStarted" },
+  { id: 5, name: "What's New?", href: "#WhatsNew" },
+  { id: 6, name: "People on the World", href: "#PeopleOnTheWorld" },
+  { id: 7, name: "Insight", href: "#Insight" },
+  { id: 8, name: "Feedback", href: "#Feedback" },
 ];
 
 export const socialMedia = [
-  { id: 1, name: "Twitter", href: "/", icon: TwitterIcon },
-  { id: 2, name: "Linkedin", href: "/", icon: LinkedinIcon },
-  { id: 3, name: "Instagram", href: "/", icon: InstagramIcon },
-  { id: 4, name: "FaceBook", href: "/", icon: FaceBookIcon },
-  { id: 5, name: "Reddit", href: "/", icon: RedditIcon },
-  { id: 6, name: "Discord", href: "/", icon: DiscordIcon },
+  {
+    id: 1,
+    name: "Twitter",
+    href: "https://github.com/hossain101199",
+    icon: TwitterIcon,
+  },
+  {
+    id: 2,
+    name: "Linkedin",
+    href: "https://github.com/hossain101199",
+    icon: LinkedinIcon,
+  },
+  {
+    id: 3,
+    name: "Instagram",
+    href: "https://github.com/hossain101199",
+    icon: InstagramIcon,
+  },
+  {
+    id: 4,
+    name: "FaceBook",
+    href: "https://github.com/hossain101199",
+    icon: FaceBookIcon,
+  },
+  {
+    id: 5,
+    name: "Reddit",
+    href: "https://github.com/hossain101199",
+    icon: RedditIcon,
+  },
+  {
+    id: 6,
+    name: "Discord",
+    href: "https://github.com/hossain101199",
+    icon: DiscordIcon,
+  },
 ];
 
 export const exploreWorlds = [
@@ -67,13 +101,13 @@ export const startingFeatures = [
 
 export const newFeatures = [
   {
-    icon: HeadsetIcon,
+    icon: VrpanoIcon,
     title: "A new world",
     subtitle:
       "we have the latest update with new world for you to try never mind",
   },
   {
-    icon: VrpanoIcon,
+    icon: HeadsetIcon,
     title: "More realistic",
     subtitle:
       "In the latest update, your eyes are narrow, making the world more realistic than ever",
@@ -82,19 +116,25 @@ export const newFeatures = [
 
 export const insights = [
   {
-    imgUrl: "/planet-06.png",
+    id: 1,
+    href: "#",
+    imgUrl: planet6,
     title: "The launch of the Metaverse makes Elon musk ketar-ketir",
     subtitle:
       "Magna etiam tempor orci eu lobortis elementum nibh tellus molestie. Diam maecenas sed enim ut sem viverra alique.",
   },
   {
-    imgUrl: "/planet-07.png",
+    id: 2,
+    href: "#",
+    imgUrl: planet7,
     title: "7 tips to easily master the madness of the Metaverse",
     subtitle:
       "Vitae congue eu consequat ac felis donec. Et magnis dis parturient montes nascetur ridiculus mus. Convallis tellus id interdum",
   },
   {
-    imgUrl: "/planet-08.png",
+    id: 3,
+    href: "#",
+    imgUrl: planet8,
     title: "With one platform you can explore the whole world virtually",
     subtitle:
       "Quam quisque id diam vel quam elementum. Viverra nam libero justo laoreet sit amet cursus sit. Mauris in aliquam sem",

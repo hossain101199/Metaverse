@@ -16,6 +16,10 @@ module.exports = {
       backgroundColor: {
         "white-opacity-8": "rgba(255, 255, 255, 0.08)",
       },
+      backgroundImage: {
+        gradient:
+          "linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 100%)",
+      },
     },
   },
   plugins: [],

@@ -8,7 +8,10 @@ import { startingFeatures } from "@/constants";
 
 const GetStarted = () => {
   return (
-    <section className="mt-[102px] md:mt-[204px] grid lg:grid-cols-7 xPaddings">
+    <section
+      id="GetStarted"
+      className="grid lg:grid-cols-7 xPaddings sectionMargin-top"
+    >
       <div className="lg:col-span-4  lg:col-start-4 lg:row-start-1">
         <SectionName name="How Metaverus Works" />
         <SectionTitle>Get started with just a few clicks</SectionTitle>

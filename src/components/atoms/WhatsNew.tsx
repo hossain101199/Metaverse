@@ -8,7 +8,10 @@ import { newFeatures } from "@/constants";
 
 const WhatsNew = () => {
   return (
-    <section className="grid lg:grid-cols-7 mt-[50px] lg:mt-[170px] xPaddings">
+    <section
+      id="WhatsNew"
+      className="grid lg:grid-cols-7 xPaddings sectionMargin-top"
+    >
       <div className="lg:col-span-4">
         <SectionName name="Whats New?" />
         <SectionTitle>What&apos;s new about Metaversus?</SectionTitle>
