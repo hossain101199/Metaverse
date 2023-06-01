@@ -1,16 +1,14 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import BoldParagraph from "./BoldParagraph";
 import NormalParagraph from "./NormalParagraph";
 
-const NewFeatures = ({
-  icon,
-  title,
-  subtitle,
-}: {
-  icon: React.JSX.Element;
+interface NewFeaturesProps {
+  icon: ReactElement;
   title: string;
   subtitle: string;
-}) => {
+}
+
+const NewFeatures: React.FC<NewFeaturesProps> = ({ icon, title, subtitle }) => {
   return (
     <div>
       <div className="flex justify-center items-center min-h-[70px] min-w-[70px] max-h-[70px] max-w-[70px] roundedRadius bg-white-opacity-8">

@@ -1,12 +1,11 @@
 import React from "react";
 
-const SectionName = ({
-  name,
-  className,
-}: {
+interface SectionNameProps {
   name: string;
   className?: string;
-}) => {
+}
+
+const SectionName: React.FC<SectionNameProps> = ({ name, className }) => {
   return (
     <h3 className={`font-normal text-sm text-secondary-white ${className}`}>
       I {name}

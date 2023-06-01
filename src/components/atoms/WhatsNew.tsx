@@ -15,7 +15,7 @@ const WhatsNew = () => {
       <div className="lg:col-span-4">
         <SectionName name="Whats New?" />
         <SectionTitle>What&apos;s new about Metaversus?</SectionTitle>
-        <div className="flex gap-11 mt-12">
+        <div className="flex flex-col lg:flex-row gap-11 mt-12">
           {newFeatures.map((feature) => (
             <NewFeatures
               key={feature.title}

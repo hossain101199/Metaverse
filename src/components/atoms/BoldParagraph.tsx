@@ -1,13 +1,15 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
-const BoldParagraph = ({
+interface BoldParagraphProps {
+  children: ReactNode;
+  textColor?: string;
+  className?: string;
+}
+
+const BoldParagraph: React.FC<BoldParagraphProps> = ({
   children,
   textColor = "text-secondary-white",
   className = "",
-}: {
-  children: React.ReactNode;
-  textColor?: string;
-  className?: string;
 }) => {
   return <p className={`font-bold ${textColor} ${className}`}>{children}</p>;
 };

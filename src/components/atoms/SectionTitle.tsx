@@ -1,11 +1,13 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
-const SectionTitle = ({
+interface SectionTitleProps {
+  children: ReactNode;
+  className?: string;
+}
+
+const SectionTitle: React.FC<SectionTitleProps> = ({
   children,
   className = "",
-}: {
-  children: React.ReactNode;
-  className?: string;
 }) => {
   return (
     <h2

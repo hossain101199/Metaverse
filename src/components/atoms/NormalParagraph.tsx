@@ -1,13 +1,15 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
-const NormalParagraph = ({
+interface NormalParagraphProps {
+  children: ReactNode;
+  textColor?: string;
+  className?: string;
+}
+
+const NormalParagraph: React.FC<NormalParagraphProps> = ({
   children,
   textColor = "text-secondary-white",
   className = "",
-}: {
-  children: React.ReactNode;
-  textColor?: string;
-  className?: string;
 }) => {
   return (
     <p className={`font-normal leading-[180%] ${textColor} ${className}`}>

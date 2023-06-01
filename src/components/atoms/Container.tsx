@@ -1,12 +1,11 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
-const Container = ({
-  children,
-  className,
-}: {
-  children: React.ReactNode;
+interface ContainerProps {
+  children: ReactNode;
   className?: string;
-}) => {
+}
+
+const Container: React.FC<ContainerProps> = ({ children, className }) => {
   return (
     <div className={`container mx-auto overflow-hidden ${className}`}>
       {children}

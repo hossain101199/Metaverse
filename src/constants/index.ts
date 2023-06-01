@@ -14,8 +14,43 @@ import VrpanoIcon from "@/assets/svgs/VrpanoIcon";
 import planet6 from "../assets/images/planet-06.png";
 import planet7 from "../assets/images/planet-07.png";
 import planet8 from "../assets/images/planet-08.png";
+import { StaticImageData } from "next/image";
+import React from "react";
 
-export const NavigationRoutes = [
+export interface NavigationRoute {
+  id: number;
+  name: string;
+  href: string;
+}
+
+export interface SocialMediaLink {
+  id: number;
+  name: string;
+  href: string;
+  icon: React.FC<React.SVGProps<SVGSVGElement>>;
+}
+
+export interface ExploreWorld {
+  id: string;
+  img: StaticImageData;
+  title: string;
+}
+
+export interface NewFeature {
+  icon: React.FC<React.SVGProps<SVGSVGElement>>;
+  title: string;
+  subtitle: string;
+}
+
+export interface Insight {
+  id: number;
+  href: string;
+  imgUrl: StaticImageData;
+  title: string;
+  subtitle: string;
+}
+
+export const NavigationRoutes: NavigationRoute[] = [
   { id: 1, name: "Home", href: "#home" },
   { id: 2, name: "About", href: "#about" },
   { id: 3, name: "The World", href: "#explore" },
@@ -26,7 +61,7 @@ export const NavigationRoutes = [
   { id: 8, name: "Feedback", href: "#Feedback" },
 ];
 
-export const socialMedia = [
+export const socialMedia: SocialMediaLink[] = [
   {
     id: 1,
     name: "Twitter",
@@ -65,7 +100,7 @@ export const socialMedia = [
   },
 ];
 
-export const exploreWorlds = [
+export const exploreWorlds: ExploreWorld[] = [
   {
     id: "world-1",
     img: planet01,
@@ -93,13 +128,13 @@ export const exploreWorlds = [
   },
 ];
 
-export const startingFeatures = [
+export const startingFeatures: string[] = [
   "Find a world that suits you and you want to enter",
   "Enter the world by reading basmalah to be safe",
   "No need to beat around the bush, just stay on the gas and have fun",
 ];
 
-export const newFeatures = [
+export const newFeatures: NewFeature[] = [
   {
     icon: VrpanoIcon,
     title: "A new world",
@@ -114,7 +149,7 @@ export const newFeatures = [
   },
 ];
 
-export const insights = [
+export const insights: Insight[] = [
   {
     id: 1,
     href: "#",

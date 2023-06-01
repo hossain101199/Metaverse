@@ -13,14 +13,14 @@ interface ExploreCardProps {
   title: string;
 }
 
-const ExploreCard = ({
+const ExploreCard: React.FC<ExploreCardProps> = ({
   id,
   className,
   img,
   active,
   setActive,
   title,
-}: ExploreCardProps): JSX.Element => {
+}) => {
   return (
     <div
       onClick={setActive}

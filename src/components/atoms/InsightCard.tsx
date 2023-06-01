@@ -1,20 +1,21 @@
 import Image, { StaticImageData } from "next/image";
 import React from "react";
-import planet from "../../assets//images/planet-06.png";
 import NormalParagraph from "./NormalParagraph";
 import Link from "next/link";
 import RightArrow from "@/assets/svgs/RightArrow";
 
-const InsightCard = ({
-  imgUrl,
-  title,
-  subtitle,
-  href,
-}: {
+interface InsightCardProps {
   href: string;
   imgUrl: StaticImageData;
   title: string;
   subtitle: string;
+}
+
+const InsightCard: React.FC<InsightCardProps> = ({
+  href,
+  imgUrl,
+  title,
+  subtitle,
 }) => {
   return (
     <div className="grid grid-cols-5 xl:grid-cols-7 gap-8 lg:gap-16 items-center">
@@ -32,7 +33,7 @@ const InsightCard = ({
         </NormalParagraph>
         <NormalParagraph className="lg:text-xl">{subtitle}</NormalParagraph>
       </div>
-      <Link href={href} className="col-span-2 md:col-span-1">
+      <Link href={href} passHref className="col-span-2 md:col-span-1">
         <RightArrow />
       </Link>
     </div>

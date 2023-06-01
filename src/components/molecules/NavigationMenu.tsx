@@ -1,4 +1,3 @@
-"use client";
 import React, { useState } from "react";
 import Modal from "../atoms/Modal";
 import { NavigationRoutes } from "@/constants";
@@ -6,7 +5,11 @@ import Link from "next/link";
 import { AnimatePresence } from "framer-motion";
 import MenuIcon from "@/assets/svgs/MenuIcon";
 
-const NavigationMenu = ({ isSearchOn }: { isSearchOn: boolean }) => {
+interface NavigationMenuProps {
+  isSearchOn: boolean;
+}
+
+const NavigationMenu: React.FC<NavigationMenuProps> = ({ isSearchOn }) => {
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
@@ -18,7 +21,7 @@ const NavigationMenu = ({ isSearchOn }: { isSearchOn: boolean }) => {
         <MenuIcon />
       </button>
 
-      <AnimatePresence initial={false} mode="wait" onExitComplete={() => null}>
+      <AnimatePresence initial={false} onExitComplete={() => null}>
         {modalOpen && (
           <Modal
             handleClose={() => setModalOpen(!modalOpen)}
@@ -28,6 +31,7 @@ const NavigationMenu = ({ isSearchOn }: { isSearchOn: boolean }) => {
               <Link
                 key={route.id}
                 href={route.href}
+                passHref
                 onClick={() => setModalOpen(!modalOpen)}
               >
                 {route.name}
