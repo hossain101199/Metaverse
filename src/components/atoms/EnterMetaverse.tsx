@@ -26,7 +26,11 @@ const EnterMetaverse = () => {
 
       <AnimatePresence initial={false} onExitComplete={() => null}>
         {isModalOpen && (
-          <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
+          <Modal
+            isOpen={isModalOpen}
+            onClose={handleCloseModal}
+            className="w-3/4"
+          >
             <Image src={gifImage} alt="GIF" className="w-full h-full" />
           </Modal>
         )}

@@ -43,15 +43,3 @@
 .modal-open .modal-overlay {
   pointer-events: auto;
 }
-
-.Ellipse8 {
-  position: absolute;
-  width: 197px;
-  height: 408px;
-  left: 777px;
-  top: -188.15px;
-
-  background: #cfecfd;
-  filter: blur(50px);
-  transform: rotate(-50.43deg);
-}

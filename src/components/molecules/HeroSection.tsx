@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import SectionName from "../atoms/SectionName";
 import { socialMedia } from "@/constants";
@@ -5,10 +6,17 @@ import Link from "next/link";
 import Image from "next/image";
 import heroImage from "../../assets/images/cover.png";
 import stamp from "../../assets/images/stamp.png";
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="mt-[25px] lg:mt-[50px]">
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      id="home"
+      className="mt-[25px] lg:mt-[50px]"
+    >
       <div className="relative z-10 flex flex-col sm:flex-row">
         <div className="flex w-full sm:pt-[90px] pl-4 lg:justify-end xl:pe-[71px]">
           <SectionName name="Home" />
@@ -50,7 +58,7 @@ const HeroSection = () => {
           className="absolute bottom-[-30px] right-[12%]"
         />
       </div>
-    </section>
+    </motion.section>
   );
 };
 
