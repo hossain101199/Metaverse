@@ -21,6 +21,29 @@
   @apply lg:w-[212px] md:w-[160px] sm:w-[80px] w-[60px] lg:h-[108px] md:h-[75px] sm:h-[45px] h-[32px] md:border-[18px] sm:border-[10px] border-[5px] rounded-r-[50px] border-white sm:mx-2 mx-[6px];
 }
 
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-open {
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.modal-open .modal-overlay {
+  pointer-events: auto;
+}
+
 .Ellipse8 {
   position: absolute;
   width: 197px;

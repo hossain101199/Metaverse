@@ -1,31 +1,53 @@
 import { dropIn } from "@/utils/motion";
-import { motion, Variants } from "framer-motion";
-import React, { ReactNode } from "react";
+import { motion } from "framer-motion";
+import React, { ReactNode, useEffect } from "react";
+import ReactDOM from "react-dom";
 
 interface ModalProps {
-  handleClose: () => void;
-  className?: string;
+  isOpen: boolean;
+  onClose: () => void;
   children: ReactNode;
+  className?: string;
 }
 
-const Modal: React.FC<ModalProps> = ({ handleClose, className, children }) => {
-  const containerVariants: Variants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
-    exit: { opacity: 0 },
-  };
+const Modal: React.FC<ModalProps> = ({
+  isOpen,
+  onClose,
+  children,
+  className,
+}) => {
+  useEffect(() => {
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        onClose();
+      }
+    };
 
-  return (
+    if (isOpen) {
+      // Add a CSS class to the body element to disable background events
+      document.body.classList.add("modal-open");
+      document.addEventListener("keydown", handleEscape);
+    }
+
+    return () => {
+      // Remove the CSS class from the body element when the modal is closed
+      document.body.classList.remove("modal-open");
+      document.removeEventListener("keydown", handleEscape);
+    };
+  }, [isOpen, onClose]);
+
+  if (!isOpen) return null;
+  return ReactDOM.createPortal(
     <motion.div
-      onClick={handleClose}
-      className="absolute z-50 top-0 left-0 h-full w-full bg-[#000000e1] flex items-center justify-center"
+      onClick={onClose}
+      className="modal-overlay"
       initial="hidden"
       animate="visible"
       exit="exit"
     >
       <motion.div
-        onClick={(e) => e.stopPropagation()}
         className={className}
+        onClick={(e) => e.stopPropagation()}
         variants={dropIn}
         initial="hidden"
         animate="visible"
@@ -33,7 +55,8 @@ const Modal: React.FC<ModalProps> = ({ handleClose, className, children }) => {
       >
         {children}
       </motion.div>
-    </motion.div>
+    </motion.div>,
+    document.body
   );
 };
 
