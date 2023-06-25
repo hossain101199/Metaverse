@@ -45,7 +45,7 @@ const ExploreCard: React.FC<ExploreCardProps> = ({
       </div>
       <BoldParagraph
         textColor="text-white"
-        className={`text-[32px] ${active !== id && "md:rotate-[-90deg]"}`}
+        className={`text-[32px] ${active !== id && "text-mode"}`}
       >
         {title}
       </BoldParagraph>

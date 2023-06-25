@@ -24,7 +24,7 @@ const InsightCard: React.FC<InsightCardProps> = ({
         alt=""
         className="roundedRadius col-span-5 xl:col-span-2 h-full object-cover"
       />
-      <div className="col-span-3 md:col-span-4">
+      <div className="col-span-3 sm:col-span-4">
         <NormalParagraph
           textColor="text-white"
           className="text-2xl lg:text-[42px]"
@@ -33,8 +33,8 @@ const InsightCard: React.FC<InsightCardProps> = ({
         </NormalParagraph>
         <NormalParagraph className="lg:text-xl">{subtitle}</NormalParagraph>
       </div>
-      <Link href={href} passHref className="col-span-2 md:col-span-1">
-        <RightArrow />
+      <Link href={href} passHref className="col-span-1 sm:col-span-1">
+        <RightArrow className="w-[50px] md:w-[100px]" />
       </Link>
     </div>
   );

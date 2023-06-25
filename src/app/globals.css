@@ -43,3 +43,9 @@
 .modal-open .modal-overlay {
   pointer-events: auto;
 }
+
+#explore .text-mode {
+  writing-mode: vertical-rl;
+  display: inline;
+  transform: rotate(180deg);
+}
