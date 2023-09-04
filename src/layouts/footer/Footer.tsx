@@ -3,7 +3,7 @@ import EnterMetaverse from "@/components/atoms/EnterMetaverse";
 import NormalParagraph from "@/components/atoms/NormalParagraph";
 import WebTitle from "@/components/atoms/WebTitle";
 import { socialMedia } from "@/constants";
-import { footerVariants } from "@/utils/motion";
+
 import Link from "next/link";
 import React from "react";
 

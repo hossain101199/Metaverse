@@ -4,7 +4,6 @@ import { useState } from "react";
 import NavigationMenu from "@/components/molecules/NavigationMenu";
 import NavigationSearch from "@/components/atoms/NavigationSearh";
 import WebTitle from "@/components/atoms/WebTitle";
-import { navVariants } from "@/utils/motion";
 
 const Navbar = () => {
   const [isSearchOn, setIsSearchOn] = useState(false);
