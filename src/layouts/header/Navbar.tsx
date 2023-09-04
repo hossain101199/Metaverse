@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+
 import { useState } from "react";
 import NavigationMenu from "@/components/molecules/NavigationMenu";
 import NavigationSearch from "@/components/atoms/NavigationSearh";
@@ -10,10 +10,7 @@ const Navbar = () => {
   const [isSearchOn, setIsSearchOn] = useState(false);
 
   return (
-    <motion.nav
-      variants={navVariants}
-      initial="hidden"
-      whileInView="show"
+    <nav
       className={`text-secondary-white grid justify-items-stretch content-center ${
         isSearchOn ? "grid-cols-1 md:grid-cols-3" : "grid-cols-3"
       } xPaddings gap-4 py-9 `}
@@ -23,7 +20,7 @@ const Navbar = () => {
       <WebTitle className={`${isSearchOn && "hidden md:block"}`} />
 
       <NavigationMenu isSearchOn={isSearchOn} />
-    </motion.nav>
+    </nav>
   );
 };
 

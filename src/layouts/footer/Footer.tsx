@@ -6,19 +6,12 @@ import { socialMedia } from "@/constants";
 import { footerVariants } from "@/utils/motion";
 import Link from "next/link";
 import React from "react";
-import { motion } from "framer-motion";
 
 const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <motion.footer
-      variants={footerVariants}
-      initial="hidden"
-      whileInView="show"
-      id="footer"
-      className="xPaddings sectionMargin-top"
-    >
+    <footer id="footer" className="xPaddings sectionMargin-top">
       <EnterMetaverse />
       <hr className="w-full border-secondary-white" />
       <div className="py-[50px] flex flex-col md:flex-row gap-9 justify-between items-center">
@@ -34,7 +27,7 @@ const Footer = () => {
           ))}
         </div>
       </div>
-    </motion.footer>
+    </footer>
   );
 };
 

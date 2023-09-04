@@ -44,8 +44,10 @@
   pointer-events: auto;
 }
 
-#explore .text-mode {
-  writing-mode: vertical-rl;
-  display: inline;
-  transform: rotate(180deg);
+@media (min-width: 768px) {
+  #explore .text-mode {
+    writing-mode: vertical-rl;
+    display: inline;
+    transform: rotate(180deg);
+  }
 }

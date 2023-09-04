@@ -1,5 +1,5 @@
 import { dropIn } from "@/utils/motion";
-import { motion } from "framer-motion";
+
 import React, { ReactNode, useEffect } from "react";
 import ReactDOM from "react-dom";
 
@@ -38,24 +38,11 @@ const Modal: React.FC<ModalProps> = ({
 
   if (!isOpen) return null;
   return ReactDOM.createPortal(
-    <motion.div
-      onClick={onClose}
-      className="modal-overlay"
-      initial="hidden"
-      animate="visible"
-      exit="exit"
-    >
-      <motion.div
-        className={className}
-        onClick={(e) => e.stopPropagation()}
-        variants={dropIn}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
-      >
+    <div onClick={onClose} className="modal-overlay">
+      <div className={className} onClick={(e) => e.stopPropagation()}>
         {children}
-      </motion.div>
-    </motion.div>,
+      </div>
+    </div>,
     document.body
   );
 };

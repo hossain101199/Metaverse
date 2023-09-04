@@ -4,14 +4,13 @@
 
 Metaverse is an innovative project that brings the concept of the metaverse to life. It offers users a captivating virtual world experience, where they can immerse themselves in an alternate reality using virtual reality (VR) devices. With Metaverse, you can explore diverse worlds, turn your dreams into reality, and connect with friends for shared adventures. It's a gateway to the future of technology, known as web 3.0, offering endless possibilities for work, play, and social interaction.
 
-The Metaverse project is built using cutting-edge technologies, including Next.js for server-side rendering and a smooth user experience. It leverages React and TypeScript for frontend development, providing a robust and scalable foundation. The project incorporates framer-motion for seamless animations and tailwindcss for responsive and aesthetically pleasing designs. It follows best practices for code quality and maintainability, with ESLint for static code analysis.
+The Metaverse project is built using cutting-edge technologies, including Next.js for server-side rendering and a smooth user experience. It leverages React and TypeScript for frontend development, providing a robust and scalable foundation. The project incorporates tailwindcss for responsive and aesthetically pleasing designs. It follows best practices for code quality and maintainability, with ESLint for static code analysis.
 
 ## Built With
 
 - `Next.js`
 - `TypeScript`
 - `Tailwind CSS`
-- `Framer Motion`
 
 ## Features
 
